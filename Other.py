@@ -10,7 +10,7 @@ class Game:
         self.c = 0
         self.second = False
         self.match = False
-
+ 
     def getboard(self):
         return self.public_board 
 
@@ -44,7 +44,7 @@ class Game:
     def left(self, fall):
         fall.col = int(fall.col)
         try:
-        # Check if it's possible to move the falling piece to the left
+        # Check if it's possible to move the falling piece to the left, if so then move it
             if fall.col != 1 and self.public_board[fall.public_f_count][int(fall.col) - 2] == '   ':
             # Move the falling piece to the left in each row
                 for offset in range(3):
